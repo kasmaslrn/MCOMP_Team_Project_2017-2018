@@ -83,7 +83,7 @@ Waypoint Propulsion::Drive(Waypoint w) {
  */
 
 double Propulsion::rotate(double theta) {
-
+//refactor to support DC
   double bodyRotation = ((2 * M_PI) * (wheelTrack / 2)) / (360 / theta);
   double pulseDistance = wheelSize / stepsInRev;
   int turnPulses = (int) abs(bodyRotation / pulseDistance);
